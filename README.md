@@ -1,8 +1,8 @@
 # react-manage-users
 
-
 This is a simple user-manage project. It is created by using react-nodejs.
 
+---------------------------------------------------
 .env file for Postgresql connection.
 write your own datas in quotes
 DB_USERNAME=""
@@ -11,6 +11,7 @@ DB_HOSTNAME=""
 DB_PORT=""
 DB_NAME=""
 
+---------------------------------------------------
 intall dependencies with npm install
 
 start server: npm start
