@@ -5,6 +5,8 @@ This is a simple user-manage project. It is created by using react-nodejs.
 ---------------------------------------------------
 .env file for Postgresql connection.
 
+create your database and a "users" table in Postgresql 
+
 write your own datas in quotes
 
 DB_USERNAME=""
@@ -28,5 +30,5 @@ server works on: http://localhost:4000/
 start frontend: cd views 
 
                 npm start
-                
+
 users app works on: http://localhost:3000/
