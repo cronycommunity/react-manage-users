@@ -1,4 +1,4 @@
-import {useEffect,useContext} from 'react';
+import {useContext} from 'react';
 import Grid from '@material-ui/core/Grid';
 import {useStyles} from './AddUserStyles';
 import {Context} from '../../App';
@@ -58,9 +58,9 @@ const AddUser=()=>{
         }),
         onSubmit: async() => {
                 const isUsed = consumer.users.filter((user)=>
-                    user.user_name==formik.values.userName
+                    user.user_name===formik.values.userName
                 )
-                if(isUsed.length==0){
+                if(isUsed.length===0){
                     consumer.addUser(formik.values);
                     console.log("Success");
                     console.log("formik.values",formik.values);

@@ -1,5 +1,4 @@
 import {useEffect,useContext} from 'react';
-import UsersTable from '../../components/Table';
 import Grid from '@material-ui/core/Grid';
 import {useStyles} from './EditUserStyles';
 import {Context} from '../../App';

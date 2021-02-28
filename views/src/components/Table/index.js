@@ -1,6 +1,5 @@
 import {useContext} from 'react';
 import { DataGrid } from '@material-ui/data-grid';
-import {useStyles} from './TableStyle';
 import Grid from '@material-ui/core/Grid';
 import { Context } from '../../App';
 import { EditButton } from '../EditButton';
@@ -43,7 +42,6 @@ export default function UsersTable() {
   ];
 
   const consumer = useContext(Context);
-  const classes = useStyles();
 
   rows = consumer?.users?.map(user=>{
     return({
