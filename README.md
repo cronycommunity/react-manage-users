@@ -3,11 +3,31 @@
 This is a simple user-manage project. It is created by using react-nodejs.
 
 ---------------------------------------------------
-create your own .env file for Postgresql connection.
 
 create your database and a "users" table in Postgresql 
 
-write your own datas in quotes
+users table must have these columns:
+
+id: INTEGER, IDENTITIY:ALWAYS, INCREMENT:1
+
+customer_number:INTEGER
+
+first_name: STRING
+
+last_name: STRING
+
+user_name: STRING
+
+email: STRING
+
+date_of_birth: DATE
+
+password: STRING
+
+last_login: DATE
+
+---------------------------------------------------
+create your own .env file for Postgresql connection and write your datas in quotes
 
 DB_USERNAME=""
 
