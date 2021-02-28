@@ -90,7 +90,7 @@ const AddUser=()=>{
                         onChange={formik.handleChange}
                         helperText={formik.errors.customerNumber} 
                         fullWidth 
-                        id="standard-basic" 
+                        id="customerNumber" 
                         label="Customer Number"
                         type="number"
                     />
@@ -100,7 +100,7 @@ const AddUser=()=>{
                         onChange={formik.handleChange}
                         helperText={formik.errors.userName}
                         fullWidth 
-                        id="standard-basic" 
+                        id="userName" 
                         label="User Name" 
                     />
                     <TextField 
@@ -109,7 +109,7 @@ const AddUser=()=>{
                         onChange={formik.handleChange}
                         helperText={formik.errors.firstName}
                         fullWidth 
-                        id="standard-basic" 
+                        id="firstName" 
                         label="First Name" 
                     />
                     <TextField 
@@ -118,7 +118,7 @@ const AddUser=()=>{
                         onChange={formik.handleChange}
                         helperText={formik.errors.lastName}
                         fullWidth 
-                        id="standard-basic" 
+                        id="lastName" 
                         label="Last Name" 
                     />
                     <TextField 
@@ -127,7 +127,7 @@ const AddUser=()=>{
                         onChange={formik.handleChange}
                         helperText={formik.errors.email}
                         fullWidth 
-                        id="standard-basic" 
+                        id="email" 
                         label="Email Address" 
                     />
                     <TextField 
@@ -137,7 +137,7 @@ const AddUser=()=>{
                         onChange={formik.handleChange}
                         helperText={formik.errors.dateOfBirth}
                         fullWidth 
-                        id="standard-basic" 
+                        id="dateOfBirth" 
                         label="Date of Birth" 
                         type="date"
                         InputLabelProps={{
@@ -151,7 +151,7 @@ const AddUser=()=>{
                         helperText={formik.errors.password1} 
                         fullWidth 
                         type="password"
-                        id="standard-basic" 
+                        id="password1" 
                         label="Password" 
                     />
                     <TextField 
@@ -161,7 +161,7 @@ const AddUser=()=>{
                         helperText={formik.errors.password2}
                         fullWidth 
                         type="password"
-                        id="standard-basic" 
+                        id="password2" 
                         label=" Repeat Password" 
                     />
                     <Button 
@@ -170,7 +170,7 @@ const AddUser=()=>{
                         color="primary"
                         type="submit"
                         fullWidth
-                        // onClick={()=>history.push("/add-user")}
+                        disabled={!formik.isValid}
                     >
                         Save
                     </Button>
@@ -180,6 +180,7 @@ const AddUser=()=>{
                         color="primary"
                         fullWidth
                         onClickCapture
+
                         onClick={()=>history.push("/")}
                     >
                         Home Page
