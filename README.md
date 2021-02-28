@@ -3,7 +3,7 @@
 This is a simple user-manage project. It is created by using react-nodejs.
 
 ---------------------------------------------------
-.env file for Postgresql connection.
+create your own .env file for Postgresql connection.
 
 create your database and a "users" table in Postgresql 
 
