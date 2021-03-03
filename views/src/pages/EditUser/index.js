@@ -68,8 +68,7 @@ const EditUser=(props)=>{
        
     }, [])
     return(
-        <Grid container spacing={3}>
-            
+        <Grid container>
             <Grid item xs={4} className={classes.formWrapper}>
             <Typography variant="h5">Edit User</Typography>
                 <form className={classes.root} onSubmit={formik.handleSubmit} validationSchema autoComplete="off">
@@ -77,11 +76,13 @@ const EditUser=(props)=>{
                         name="customerNumber"
                         value={formik.values.customerNumber}
                         onChange={formik.handleChange}
-                        helperText={formik.errors.customerNumber} 
+                        helperText={formik.touched.customerNumber && formik.errors.customerNumber}
+                        error={formik.touched.customerNumber && formik.errors.customerNumber}
                         fullWidth 
                         id="standard-basic" 
                         label="Customer Number"
                         type="number"
+                        onBlur={formik.handleBlur}
                     />
                     <TextField 
                         name="userName"
@@ -99,38 +100,47 @@ const EditUser=(props)=>{
                         name="firstName"
                         value={formik.values.firstName}
                         onChange={formik.handleChange}
-                        helperText={formik.errors.firstName}
+                        helperText={formik.touched.firstName && formik.errors.firstName}
+                        error={formik.touched.firstName && formik.errors.firstName}
                         fullWidth 
                         id="standard-basic" 
                         label="First Name" 
+                        onBlur={formik.handleBlur}
                     />
                     <TextField 
                         name="lastName"
                         value={formik.values.lastName}
                         onChange={formik.handleChange}
-                        helperText={formik.errors.lastName}
+                        helperText={formik.touched.lastName && formik.errors.lastName}
+                        error={formik.touched.lastName && formik.errors.lastName}
                         fullWidth 
                         id="standard-basic" 
                         label="Last Name" 
+                        onBlur={formik.handleBlur}
                     />
                     <TextField 
                         name="email"
                         value={formik.values.email}
                         onChange={formik.handleChange}
                         helperText={formik.errors.email}
+                        helperText={formik.touched.email && formik.errors.email}
+                        error={formik.touched.email && formik.errors.email}
                         fullWidth 
                         id="standard-basic" 
                         label="Email Address" 
+                        onBlur={formik.handleBlur}
                     />
                     <TextField 
                         name="dateOfBirth"
                         value={formik.values.dateOfBirth}
                         onChange={formik.handleChange}
-                        helperText={formik.errors.dateOfBirth}
+                        helperText={formik.touched.dateOfBirth && formik.errors.dateOfBirth}
+                        error={formik.touched.dateOfBirth && formik.errors.dateOfBirth}
                         fullWidth 
                         id="standard-basic" 
                         label="Date of Birth" 
                         type="date"
+                        onBlur={formik.handleBlur}
                         InputLabelProps={{
                             shrink: true,
                           }}
@@ -139,7 +149,8 @@ const EditUser=(props)=>{
                         name="password1"
                         value={formik.values.password1}
                         onChange={formik.handleChange}
-                        helperText={formik.errors.password1} 
+                        helperText={formik.touched.password1 && formik.errors.password1}
+                        error={formik.touched.password1 && formik.errors.password1}
                         fullWidth 
                         type="password"
                         id="standard-basic" 
@@ -149,7 +160,8 @@ const EditUser=(props)=>{
                         name="password2"
                         value={formik.values.password2}
                         onChange={formik.handleChange}
-                        helperText={formik.errors.password2}
+                        helperText={formik.touched.password2 && formik.errors.password2}
+                        error={formik.touched.password2 && formik.errors.password2}
                         fullWidth 
                         type="password"
                         id="standard-basic" 
@@ -161,7 +173,7 @@ const EditUser=(props)=>{
                         color="primary"
                         type="submit"
                         fullWidth
-                        // onClick={()=>history.push("/")}
+                        disabled={!formik.isValid}
                     >
                     Save
                 </Button>
